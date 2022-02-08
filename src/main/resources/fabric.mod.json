@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "hostingluisch",
+  "version": "${version}",
+
+  "name": "Hosting-luisch Carpet",
+  "description": "this is a addon for carpet mod using Hosting-luisch",
+  "authors": [
+    "luisch444"
+  ],
+  "contact": {
+    "homepage": "http://host.luisch444.xyz/",
+    "sources": "https://github.com/luisch444/Hosting-luisch-Carpet"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "xyz.luisch444.carpet.HostingluischServer"
+    ]
+  },
+  "mixins": [
+    "hostingluisch.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "minecraft": "1.17.x",
+    "carpet": ">=1.4.56"
+  },
+  "custom": {
+    "modmenu": {
+      "parent": "carpet"
+    }
+  }
+}
