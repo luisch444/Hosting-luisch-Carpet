@@ -60,7 +60,7 @@ by luisch444 my discord: [discord](https://discord.gg/gGtqFXVh5q)
 ### How to build
 
 * First of all clone the repository `git clone https://github.com/luisch444/Hosting-luisch-Carpet.git`
-* Set the "gradle.properties" file variables like `org.gradle.java.home` (the path to your java, you can delete for use the default)
+* Set the "gradle.properties" file variables
 * Generate the sources `./gradlew genSources`
 * Then build the proyect `./gradlew build`
 
