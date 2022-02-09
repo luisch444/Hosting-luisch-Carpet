@@ -1,6 +1,8 @@
 # Hosting-luisch Carpet
 
-This carpet was created for servers that uses Hosting-luisch and want some custom carpets rules. Also if a friend ask me to create a rule I will do it (if I considerate)
+This carpet was created for servers that uses Hosting-luisch and want some custom carpets rules. Also if a friend ask me to create a rule I will do it (if I considerate).
+
+The principals versions of the mod are 1.17 1.18 1.16 but if you want to another version just ask me via discord, or if you know you can also ported by your self!
 
 by luisch444 my discord: [discord](https://discord.gg/gGtqFXVh5q)
 
@@ -50,8 +52,15 @@ by luisch444 my discord: [discord](https://discord.gg/gGtqFXVh5q)
 >
 > Use: /carpet {setdefault} stackeableTotemsSize (1-64) <-- Could be more than 64 but in survival is not recommended
 >
-> Limit the amount of stacking in the rule [stackeableTotems](/src/main/main/README.md#stackeabletotems-class)
+> Limit the amount of stacking in the rule [stackeableTotems](/README.md#stackeabletotems-class)
 
 
+## Building
 
+### How to build
+
+* First of all clone the repository `git clone https://github.com/luisch444/Hosting-luisch-Carpet.git`
+* Set the "gradle.properties" file variables like `org.gradle.java.home` (the path to your java, you can delete for use the default)
+* Generate the sources `./gradlew genSources`
+* Then build the proyect `./gradlew build`
 
