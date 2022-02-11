@@ -8,7 +8,10 @@
     "BlockMixin",
     "EndermanEntityMixin",
     "VillagerEntityMixin",
-    "ItemStackMixin"
+    "ItemStackMixin",
+    "ZombieEntityMixin",
+    "AbstractSkeletonEntityMixin",
+    "ItemCooldownManagerMixin"
   ],
   "client": [
   ],

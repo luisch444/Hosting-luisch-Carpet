@@ -12,6 +12,7 @@ import static carpet.settings.RuleCategory.*;
 
 public class HostingluischSettings {
     public static final String HOST = "Hosting-luisch";
+    public static final String BASTION = "Bastion-Carpet";
     public static final String EpsilonCarpetSettingsCategory = "epsilon-carpet";
 
     @Rule(desc = "DeepSlate have the same hardness that stone", category = { HOST, SURVIVAL, FEATURE})
@@ -33,6 +34,12 @@ public class HostingluischSettings {
             strict = false,
             category = { HOST, SURVIVAL, FEATURE})
     public static int stackeableTotemsSize = 16;
+
+    @Rule(desc = "It's Halloween for Mobs.", category = {HOST, BASTION, CREATIVE, FEATURE, EXPERIMENTAL})
+    public static boolean isHalloween = false;
+
+    @Rule(desc = "It's Halloween for Mobs.", category = {HOST, CREATIVE, FEATURE})
+    public static boolean enderPearlsNoCooldown = false;
 
     /*
     * ----------------------------------------------------------------------------
