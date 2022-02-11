@@ -54,6 +54,13 @@ by luisch444 my discord: [discord](https://discord.gg/gGtqFXVh5q)
 >
 > Limit the amount of stacking in the rule [stackeableTotems](/README.md#stackeabletotems-class)
 
+### enderPearlsNoCooldown [class](/src/main/java/xyz/luisch444/carpet/mixin/EndermanEntityMixin.java)
+
+>
+> Use: /carpet {setdefault} enderPearlsNoCooldown true/false
+>
+> Disable cooldown of enderpearls
+
 
 ## Building
 

@@ -38,7 +38,7 @@ public class HostingluischSettings {
     @Rule(desc = "It's Halloween for Mobs.", category = {HOST, BASTION, CREATIVE, FEATURE, EXPERIMENTAL})
     public static boolean isHalloween = false;
 
-    @Rule(desc = "It's Halloween for Mobs.", category = {HOST, CREATIVE, FEATURE})
+    @Rule(desc = "Disable cooldown of enderpearls", category = {HOST, CREATIVE, FEATURE})
     public static boolean enderPearlsNoCooldown = false;
 
     /*
