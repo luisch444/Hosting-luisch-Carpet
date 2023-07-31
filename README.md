@@ -1,8 +1,8 @@
 # Hosting-luisch Carpet
 
-This carpet was created for servers that uses Hosting-luisch and want some custom carpets rules. Also if a friend ask me to create a rule I will do it (if I considerate).
+This carpet was created for servers that uses Hosting-luisch and want some custom carpets rules. Also, if a friend ask me to create a rule I will do it (if I considerate).
 
-The principals versions of the mod are 1.17 1.18 1.16 but if you want to another version just ask me via discord, or if you know you can also ported by your self!
+The principals versions of the mod are 1.17 1.18 1.16 but if you want to another version just ask me via discord, or if you know you can also port by your self!
 
 by luisch444 my discord: [discord](https://discord.gg/gGtqFXVh5q)
 
@@ -66,8 +66,8 @@ by luisch444 my discord: [discord](https://discord.gg/gGtqFXVh5q)
 
 ### How to build
 
-* First of all clone the repository `git clone https://github.com/luisch444/Hosting-luisch-Carpet.git`
+* First clone the repository `git clone https://github.com/luisch444/Hosting-luisch-Carpet.git`
 * Set the "gradle.properties" file variables
 * Generate the sources `./gradlew genSources`
-* Then build the proyect `./gradlew build`
+* Then build the project `./gradlew build`
 

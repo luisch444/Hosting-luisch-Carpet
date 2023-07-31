@@ -1,74 +1,66 @@
 package xyz.luisch444.carpet;
 
-import carpet.settings.ParsedRule;
-import carpet.settings.Rule;
-import carpet.settings.RuleCategory;
-import carpet.settings.Validator;
+import carpet.api.settings.CarpetRule;
+import carpet.api.settings.Rule;
+import carpet.api.settings.Validator;
 import net.minecraft.server.command.ServerCommandSource;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Arrays;
 
-import static carpet.settings.RuleCategory.*;
+import static carpet.api.settings.RuleCategory.*;
 
 public class HostingluischSettings {
-    public static final String HOST = "Hosting-luisch";
-    public static final String BASTION = "Bastion-Carpet";
-    public static final String EpsilonCarpetSettingsCategory = "epsilon-carpet";
+    public static final String HOST = "Hostingluisch";
 
-    @Rule(desc = "DeepSlate have the same hardness that stone", category = { HOST, SURVIVAL, FEATURE})
-    public static boolean deepSlateInstaminable = false;
+    public static final String COPRA = "CopraHacks";
 
-    @Rule(desc = "EndStone have the same hardness that stone", category = { HOST, SURVIVAL, FEATURE})
-    public static boolean endStonelessHardness = false;
+    @Rule(categories = { HOST, SURVIVAL, FEATURE})
+    public static boolean deepslateInstaminable = false;
 
-    @Rule(desc = "Endermans not tries to pick any block", category = { HOST, SURVIVAL, CREATIVE, OPTIMIZATION})
+    @Rule(categories = { HOST, SURVIVAL, FEATURE})
+    public static boolean endstoneInstaminable = false;
+
+    @Rule(categories = { HOST, SURVIVAL, CREATIVE, OPTIMIZATION})
     public static boolean endermanNoGrief = false;
 
-    @Rule(desc = "Disable generation of iron golems by villagers", category = { HOST, SURVIVAL, CREATIVE})
+//    @Rule(desc = "Allows always endermans picks the blocks in the list", category = { HOST, SURVIVAL, CREATIVE, OPTIMIZATION})
+//    public static List<Block> allowEndermansPick = Arrays.asList(Blocks.PUMPKIN, Blocks.MELON);
+
+    @Rule(categories = { HOST, SURVIVAL, CREATIVE})
     public static boolean villagersNoGenerateGolems = false;
 
-    @Rule(desc = "Totems can be stackeable", category = { HOST, SURVIVAL, FEATURE})
+    @Rule(categories = { HOST, SURVIVAL, FEATURE})
     public static boolean stackeableTotems = false;
-    @Rule(desc = "Limit the amount of stacking in the rule stackeableTotems",
-            options = {"16", "64", "8"},
+    @Rule(options = {"16", "64", "8"},
             strict = false,
-            category = { HOST, SURVIVAL, FEATURE})
+            categories = { HOST, SURVIVAL, FEATURE})
     public static int stackeableTotemsSize = 16;
 
-    @Rule(desc = "It's Halloween for Mobs.", category = {HOST, BASTION, CREATIVE, FEATURE, EXPERIMENTAL})
+    @Rule(categories = {HOST, CREATIVE, FEATURE, EXPERIMENTAL})
     public static boolean isHalloween = false;
 
-    @Rule(desc = "Disable cooldown of enderpearls", category = {HOST, CREATIVE, FEATURE})
+    @Rule(categories = {HOST, CREATIVE, FEATURE})
     public static boolean enderPearlsNoCooldown = false;
 
-    /*
-    * ----------------------------------------------------------------------------
-    * part of epsilon carpet https://github.com/EpsilonSMP/Epsilon-Carpet
-    *
-    * */
+    @Rule(categories = {HOST, CREATIVE, FEATURE, COPRA})
+    public static boolean squidsNoSpawn = false;
+
     private static final String[] carefulBreakOptions = new String[] { "never", "always", "sneaking", "no-sneaking" };
-    @Rule(
-            desc = "Places the mined block in the player inventory when sneaking.",
-            category = { EpsilonCarpetSettingsCategory, SURVIVAL, FEATURE, EXPERIMENTAL, HOST },
+    @Rule(categories = { SURVIVAL, FEATURE, EXPERIMENTAL, HOST },
             options = { "never", "always", "sneaking", "no-sneaking" },
-            validate = { carefulBreakValidator.class }
+            validators = carefulBreakValidator.class
     )
     public static String carefulBreak = "never";
 
     private static class carefulBreakValidator extends Validator<String> {
 
         @Override
-        public String validate(ServerCommandSource serverCommandSource, ParsedRule<String> parsedRule, String s, String s2) {
-            if ((serverCommandSource == null || parsedRule.get().equals(s)) && Arrays.asList(carefulBreakOptions).contains(s))
-                carefulBreak = s;
-            return s;
+        public String validate(@Nullable ServerCommandSource source, CarpetRule<String> changingRule, String newValue, String userInput) {
+            if ((source == null || changingRule.name().equals(newValue)) && Arrays.asList(carefulBreakOptions).contains(newValue))
+                carefulBreak = newValue;
+            return newValue;
         }
     }
-    /*
-    *
-    * finish of epsilon carpet https://github.com/EpsilonSMP/Epsilon-Carpet
-    * ----------------------------------------------------------------------------
-    * */
-
 
 }

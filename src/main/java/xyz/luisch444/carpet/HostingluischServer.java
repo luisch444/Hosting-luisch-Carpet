@@ -2,11 +2,12 @@ package xyz.luisch444.carpet;
 
 import carpet.CarpetExtension;
 import carpet.CarpetServer;
-import com.mojang.brigadier.CommandDispatcher;
+import carpet.utils.Translations;
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.server.command.ServerCommandSource;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.Map;
 
 
 public class HostingluischServer implements CarpetExtension, ModInitializer {
@@ -33,9 +34,12 @@ public class HostingluischServer implements CarpetExtension, ModInitializer {
         CarpetServer.settingsManager.parseSettingsClass(HostingluischSettings.class);
     }
 
+
     @Override
-    public void registerCommands(CommandDispatcher<ServerCommandSource> dispatcher) {
-        //commandclass.register(dispatcher);
+    public Map<String, String> canHasTranslations(String lang)
+    {
+        return Translations.getTranslationFromResourcePath("assets/hostingluisch/lang/" + lang + ".json");
     }
+
 
 }

@@ -14,7 +14,7 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "__icon": "assets/hostingluisch/icon.png",
 
   "environment": "*",
   "entrypoints": {
@@ -27,9 +27,9 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.11.3",
-    "minecraft": "1.18.x",
-    "carpet": ">=1.4.57"
+    "fabricloader": ">=0.14.21",
+    "minecraft": "1.20.x",
+    "carpet": ">=1.4.112"
   },
   "custom": {
     "modmenu": {
