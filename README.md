@@ -1,28 +1,36 @@
 # Hosting-luisch Carpet
 
-This carpet was created for servers that uses Hosting-luisch and want some custom carpets rules. Also, if a friend ask me to create a rule I will do it (if I considerate).
+This carpet extension mod created for servers that uses Hosting-luisch and want some custom carpets rules. But anyone can install it and suggest new rules or improvements.
 
-The principals versions of the mod are 1.17 1.18 1.16 but if you want to another version just ask me via discord, or if you know you can also port by your self!
+The principals versions of the mod are 1.20 1.19.4 1.17 but if you want to another version just ask me via discord, or if you know you can always port it yourself and make a pull-request.
 
 by luisch444 my discord: [discord](https://discord.gg/gGtqFXVh5q)
 
+## Installation
+
+This is a mod extension of [carpet-mod](https://github.com/gnembon/fabric-carpet) powered by [FabricMC](https://fabricmc.net/). To install all of it you must follow these rules:
+
+1. Install the last [fabric loader](https://fabricmc.net/use/installer/)
+2. Download the last updated version of carpet mod for the version you are going to play, [github-releases](https://github.com/gnembon/fabric-carpet/releases) [curseforge](https://www.curseforge.com/minecraft/mc-mods/carpet/files)
+3. Download the last mod version of this carpet on [releases](https://github.com/luisch444/Hosting-luisch-Carpet/releases)
+4. Move both mods to the `mod` folder located on `.minecraft` folder
+
 ## Rules
 
-### deepSlate Instaminable [class](/src/main/java/xyz/luisch444/carpet/mixin/AbstractBlockStateMixin.java)
+### deepslateInstaminable [class](/src/main/java/xyz/luisch444/carpet/mixin/AbstractBlockStateMixin.java)
 
-> Use: /carpet {setdefault} deepSlateInstaminable true/false
+> Use: /carpet {setdefault} deepslateInstaminable true/false
 >
-> This option make DeepSlate have the same hardness that stone
+> Deepslate is instaminable with efficiency 5 and haste 2
 
-### endStone EndStone less Hardnes [class](/src/main/java/xyz/luisch444/carpet/mixin/AbstractBlockStateMixin.java)
+### endstoneInstaminable [class](/src/main/java/xyz/luisch444/carpet/mixin/AbstractBlockStateMixin.java)
 
-> Use: /carpet {setdefault} edStonelessHardnes true/false
+> Use: /carpet {setdefault} endstoneInstaminable true/false
 >
-> This option make EndStone have the same hardness that stone
+> Endstone is instaminable with efficiency 5 and haste 2
 
 ### carefulBreak [class](/src/main/java/xyz/luisch444/carpet/mixin/BlockMixin.java)
 
-> coppied from epsilon carpet(1.16) https://github.com/EpsilonSMP/Epsilon-Carpet
 >
 > Use: /carpet {setdefault} carefulBreak ("never", "always", "sneaking", "no-sneaking")
 >
@@ -33,14 +41,14 @@ by luisch444 my discord: [discord](https://discord.gg/gGtqFXVh5q)
 >
 > Use: /carpet {setdefault} endermanNoGrief true/false
 >
-> Endermans not tries to pick any block
+> Endermans will not attempt to pick up any block
 
 ### villagersNoGenerateGolems [class](/src/main/java/xyz/luisch444/carpet/mixin/VillagerEntityMixin.java)
 
 >
 > Use: /carpet {setdefault} villagersNoGenerateGolems true/false
 >
-> Villagers not generates golemns
+> Disable generation of iron golems by villagers
 
 ### stackeableTotems [class](/src/main/java/xyz/luisch444/carpet/mixin/ItemStackMixin.java)
 
@@ -61,6 +69,13 @@ by luisch444 my discord: [discord](https://discord.gg/gGtqFXVh5q)
 >
 > Disable cooldown of enderpearls
 
+### squidsNoSpawn [class](/src/main/java/xyz/luisch444/carpet/mixin/SquidEntityMixin.java)
+
+>
+> Use: /carpet {setdefault} squidsNoSpawn true/false
+>
+> Disable that squids spawns natural
+
 
 ## Building
 
@@ -70,4 +85,3 @@ by luisch444 my discord: [discord](https://discord.gg/gGtqFXVh5q)
 * Set the "gradle.properties" file variables
 * Generate the sources `./gradlew genSources`
 * Then build the project `./gradlew build`
-
