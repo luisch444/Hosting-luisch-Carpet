@@ -1,0 +1,15 @@
+{
+  "carpet.category.host": "Hostingluisch",
+
+  "carpet.rule.deepslateInstaminable.desc": "Deepslate is instaminable with efficiency 5 and haste 2",
+  "carpet.rule.endstoneInstaminable.desc": "Endstone is instaminable with efficiency 5 and haste 2",
+  "carpet.rule.endermanNoGrief.desc": "Endermans will not attempt to pick up any block",
+  "carpet.rule.villagersNoGenerateGolems.desc": "Disable generation of iron golems by villagers",
+  "carpet.rule.stackeableTotems.desc": "Totems can be stackeable",
+  "carpet.rule.stackeableTotemsSize.desc": "Limit the amount of stacking in the rule stackeableTotems",
+  "carpet.rule.stackeableTotemsSize.extra.0": "Requires stackeableTotems to work",
+  "carpet.rule.isHalloween.desc": "Set Halloween for Mobs",
+  "carpet.rule.enderPearlsNoCooldown.desc": "Disable cooldown from enderpearls",
+  "carpet.rule.squidsNoSpawn.desc": "Disable that squids spawns natural, #CopraHacks",
+  "carpet.rule.carefulBreak.desc": "Places the mined block in the player inventory while never/always/sneaking/no-sneaking"
+}
