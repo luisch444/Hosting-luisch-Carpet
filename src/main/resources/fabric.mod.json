@@ -28,8 +28,8 @@
 
   "depends": {
     "fabricloader": ">=0.14.21",
-    "minecraft": "1.20.x",
-    "carpet": ">=1.4.112"
+    "minecraft": "1.19.4",
+    "carpet": ">=1.4.101"
   },
   "custom": {
     "modmenu": {
