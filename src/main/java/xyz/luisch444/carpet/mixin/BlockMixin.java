@@ -1,6 +1,5 @@
 package xyz.luisch444.carpet.mixin;
 
-import carpet.CarpetServer;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.Entity;
