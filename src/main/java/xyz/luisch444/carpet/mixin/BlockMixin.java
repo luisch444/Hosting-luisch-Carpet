@@ -1,6 +1,5 @@
 package xyz.luisch444.carpet.mixin;
 
-import carpet.CarpetServer;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.Entity;
@@ -16,9 +15,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import xyz.luisch444.carpet.HostingluischSettings;
 
 
@@ -32,6 +33,7 @@ import static net.minecraft.block.Block.*;
 public abstract class BlockMixin implements ItemConvertible {
 
 
+    @Unique
     private static Random rand = new Random();
 
     @Inject(method = "dropStacks(Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/entity/BlockEntity;Lnet/minecraft/entity/Entity;Lnet/minecraft/item/ItemStack;)V",
@@ -60,7 +62,7 @@ public abstract class BlockMixin implements ItemConvertible {
 
     //carefulBreak Multi-Blocks
     @Inject(method = "onBreak", at = @At("HEAD"))
-    private void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player, CallbackInfo ci) {
+    private void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player, CallbackInfoReturnable<BlockState> cir) {
         boolean isSneaking = player.isInSneakingPose();
         if ((HostingluischSettings.carefulBreak.equals("sneaking") && isSneaking) ||
                         (HostingluischSettings.carefulBreak.equals("no-sneaking") && !isSneaking) ||
