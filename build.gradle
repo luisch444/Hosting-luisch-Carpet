@@ -51,7 +51,7 @@ java {
 loom {
 	// For modern yarn
 	useIntermediateMappings = true
-	intermediaryUrl = 'https://repo.codemc.io/repository/relativitymc/org/relativitymc/intermediary/%1$s/intermediary-%1$s-v2.jar'
+	//intermediaryUrl = 'https://repo.codemc.io/repository/relativitymc/org/relativitymc/intermediary/%1$s/intermediary-%1$s-v2.jar'
 }
 
 jar {
