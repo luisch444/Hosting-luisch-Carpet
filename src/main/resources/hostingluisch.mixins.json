@@ -9,8 +9,7 @@
     "EndermanEntityMixin",
     "VillagerEntityMixin",
     "ItemStackMixin",
-    "ZombieEntityMixin",
-    "AbstractSkeletonEntityMixin",
+    "HolidaysMixin",
     "ItemCooldownManagerMixin",
     "SquidEntityMixin"
   ],

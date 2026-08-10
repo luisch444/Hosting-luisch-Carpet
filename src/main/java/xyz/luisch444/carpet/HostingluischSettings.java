@@ -37,7 +37,7 @@ public class HostingluischSettings {
             categories = { HOST, SURVIVAL, FEATURE})
     public static int stackeableTotemsSize = 16;
 
-    @Rule(categories = {HOST, CREATIVE, FEATURE, EXPERIMENTAL})
+    @Rule(categories = {HOST, CREATIVE, FEATURE})
     public static boolean isHalloween = false;
 
     @Rule(categories = {HOST, CREATIVE, FEATURE})
