@@ -13,15 +13,24 @@ repositories {
 	maven {
 		url 'https://www.cursemaven.com'
 	}
+	// For deobf yarn, until I've had time to review PRs in old mappings (to not break them)
+	exclusiveContent {
+		forRepository {
+			maven { url = "https://repo.codemc.io/repository/relativitymc/" }
+		}
+		filter {
+			includeGroup "org.relativitymc"
+		}
+	}
 }
 
 dependencies {
 	// To change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+	mappings "org.relativitymc:modern-yarn:${project.yarn_mappings}:v2"
 	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-	modImplementation "carpet:fabric-carpet:${project.minecraft_version}-${project.carpet_core_version}"
+	modImplementation "carpet:fabric-carpet:${project.carpet_core_version}"
 }
 
 processResources {
@@ -51,7 +60,7 @@ java {
 loom {
 	// For modern yarn
 	useIntermediateMappings = true
-	//intermediaryUrl = 'https://repo.codemc.io/repository/relativitymc/org/relativitymc/intermediary/%1$s/intermediary-%1$s-v2.jar'
+	intermediaryUrl = 'https://repo.codemc.io/repository/relativitymc/org/relativitymc/intermediary/%1$s/intermediary-%1$s-v2.jar'
 }
 
 jar {
