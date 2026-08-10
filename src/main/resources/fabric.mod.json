@@ -14,7 +14,6 @@
   },
 
   "license": "CC0-1.0",
-  "__icon": "assets/hostingluisch/icon.png",
 
   "environment": "*",
   "entrypoints": {
@@ -28,8 +27,8 @@
 
   "depends": {
     "fabricloader": ">=0.14.21",
-    "minecraft": ">=1.21.6",
-    "carpet": ">=1.4.177"
+    "minecraft": ">=1.21.9",
+    "carpet": ">=1.4.185"
   },
   "custom": {
     "modmenu": {
